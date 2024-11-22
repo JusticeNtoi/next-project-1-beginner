@@ -12,7 +12,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <main className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="p-4 shadow-md bg-white rounded-md">
         <h1 className="text-2xl font-semibold mb-4 text-black">
           Enter your Name
@@ -32,6 +32,6 @@ export default function Home() {
           </button>
         </form>
       </div>
-    </div>
+    </main>
   );
 }
