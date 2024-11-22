@@ -1,26 +1,22 @@
 "use client";
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
-import { Greet } from "./components/greet";
-import { Counter } from "./components/counter";
 
-export default function Home() {
+export default function PredictionHome() {
   const [inputVal, setInputVal] = useState("");
   const { push } = useRouter();
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
-    push(`/prediction/${inputVal}`);
+    push(`./prediction/${inputVal}`);
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <main className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="p-4 shadow-md bg-white rounded-md">
         <h1 className="text-2xl font-semibold mb-4 text-black">
           Enter your Name
         </h1>
-        <Greet/>
-        <Counter/>
         <form onSubmit={handleSubmit} className="space-y-3">
           <input
             type="text"
@@ -36,6 +32,6 @@ export default function Home() {
           </button>
         </form>
       </div>
-    </div>
+    </main>
   );
 }
