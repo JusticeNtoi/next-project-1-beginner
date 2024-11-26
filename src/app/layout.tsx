@@ -5,7 +5,7 @@ import {
 
 } from '@clerk/nextjs'
 import "./globals.css";
-import { Navigation } from "./components/navigations";
+import { Navigation } from "./components/navigation";
 
 
 const geistSans = localFont({
